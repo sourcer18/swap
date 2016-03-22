@@ -13,3 +13,29 @@ Aquí enlazamos a la [web de google](http://www.google.com)
 Aquí incluimos una imagen
 
 ![imagen](https://github.com/sourcer18/swap/blob/master/practica1/m.png)
+
+Y aquí terminamos poniendo una tabla:
+
+dog | bird | cat
+:-- | :--: | --:
+foo | foo  | foo 
+bar | bar  | bar
+baz | baz  | baz
+
+| Left align | Right align | Center align |
+| :----------|------------:|:------------:|
+| This       |   This      |  This        |
+| column     |column       | column       |
+| will       | will        | will         |
+| be         |be           | be           |
+| left       |right        | center       |
+| aligned    |aligned      |  aligned     |
+
+y con texto más grande
+
+### Adiós!
+
+
+
+
+
