@@ -37,8 +37,6 @@ Primero establezco la contraseña , lo muestro en la imagen :
 
 
 
-![imagen](imagen2.png)
-
 
 
 
