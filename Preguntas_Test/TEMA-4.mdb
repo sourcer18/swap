@@ -1,0 +1,16 @@
+<pregunta>
+  <enunciado>Ventajas de una granja web con balanceo de carga</enunciado>
+  <opcionA> Mejora la escalabilidad</opcionA>
+  <opcionB>Mejora la disponibilidad</opcionB>
+  <opcionC>Facilita el mantenimiento (arreglar o añadir máquinas sobre la marcha)</opcionC>
+  <opcionD>Las tres respuestas anteriores son correctas</opcionD>
+  <solucion>D/solucion>
+</pregunta>
+<pregunta>
+  <enunciado>¿Qué es un balanceador de carga?</enunciado>
+  <opcionA>Es un puente entre la red y los servidores finales.</opcionA>
+  <opcionB>Puede manejar los protocolos de alto nivel.</opcionB>
+  <opcionC>Puede manejar los protocolos de nivel de red.</opcionC>
+  <opcionD>Las tres respuestas anteriores son correctas</opcionD>
+  <solucion>D</solucion>
+</pregunta>
