@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tema titulo="Tema 1">
+<pregunta>
+  <enunciado>La escalabilidad es:</enunciado>
+  <opcionA>La capacidad de mejorar un servidor</opcionA>
+  <opcionB>La capacidad de aceptar un numero determinado de peticiones</opcionB>
+  <opcionC>La capacidad de dar soporte a un numero creciente de usuarios</opcionC>
+  <opcionD>La capacidad de procesar una peticion web</opcionD>
+  <solucion>C</solucion>
+</pregunta>
+<pregunta>
+  <enunciado>Indique cual de las siguientes opciones es correcta</enunciado>
+  <opcionA>Un sitio con poco trafico funcionara con una sola máquina</opcionA>
+  <opcionB>Un servidor que ofrece todos los servicios siempre es escalable</opcionB>
+  <opcionC>La mejor solucion es tener una máquina servidor replicada</opcionC>
+  <opcionD>Todas las anteriores</opcionD>
+  <solucion>A</solucion>
+</pregunta>

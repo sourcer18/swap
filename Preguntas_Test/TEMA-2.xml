@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tema titulo="Tema 2">
+<pregunta>
+  <enunciado>¿Qué es la alta disponibilidad?</enunciado>
+  <opcionA>Capacidad de aceptar visitas las 24h todos los días.</opcionA>
+  <opcionB>Uso de una máquina con software específico</opcionB>
+  <opcionC>Configuración de DMZ tradicional y Configuración de DMZ doble</opcionC>
+  <opcionD>Ninguna es correcta</opcionD>
+  <solucion>A/solucion>
+</pregunta>
+<pregunta>
+  <enunciado>¿Cómo analizar la sobrecarga?</enunciado>
+  <opcionA>Si la CPU está cerca del 100% todo el rato y el resto de subsistemas no está sobrecargado, sustituir por una CPU más potente.
+Servidor web que sirve contenido web a usuarios finales</opcionA>
+  <opcionB>Si el uso de RAM es muy alto, veremos un uso alto de disco (por swapping). Incrementando la cantidad de RAM mejoraremos el rendimiento.</opcionB>
+  <opcionC>Un ancho de banda insuficiente afectará al rendimiento. Contratando una mejor conexión será suficiente.</opcionC>
+  <opcionD>Todas las respuestas anteriores son correctas</opcionD>
+  <solucion>D</solucion>
+</pregunta>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tema titulo="Tema 3">
+<pregunta>
+  <enunciado>¿Qué alternativas existen para conectar una granja web a otras redes?</enunciado>
+  <opcionA>Configuración de DMZ simple</opcionA>
+  <opcionB>Configuración sin DMZ</opcionB>
+  <opcionC>Configuración de DMZ tradicional y Configuración de DMZ doble</opcionC>
+  <opcionD>Las tres respuestas anteriores son correctas</opcionD>
+  <solucion>D/solucion>
+</pregunta>
+<pregunta>
+  <enunciado>¿Qué es una granja web?</enunciado>
+  <opcionA>Servidor web que sirve contenido web a usuarios finales</opcionA>
+  <opcionB>Instalaciones donde se producen webs</opcionB>
+  <opcionC>Es un conjunto de servidores dedicados a servir contenido web a los usuarios finales</opcionC>
+  <opcionD>Ninguna opción es correcta</opcionD>
+  <solucion>A</solucion>
+</pregunta>
