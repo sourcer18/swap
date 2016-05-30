@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tema titulo="Tema 6">
+
+<pregunta>
+  <enunciado>¿Cuáles son los procedimientos de autentificación?</enunciado>
+  <opcionA>Una clave o Pin</opcionA>
+  <opcionB>Una tarjeta física que incluirá la clave</opcionB>
+  <opcionC>Un escáner de retina, huella dactilar o ADN</opcionC>
+  <opcionD>Las respuestas anteriores son correctas</opcionD>
+  <solucion>D</solucion>
+</pregunta>
+<pregunta>
+  <enunciado>¿Qué hace un cortafuegos?</enunciado>
+  <opcionA>Protege el sistema de accesos indebidos</opcionA>
+  <opcionB>No hace nada</opcionB>
+  <opcionC>Cortar el fuego</opcionC>
+  <opcionD>Ninguna de las anteriores es correcta</opcionD>
+  <solucion>A</solucion>
+</pregunta>

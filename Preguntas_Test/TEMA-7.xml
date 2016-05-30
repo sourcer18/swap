@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tema titulo="Tema 7">
+
+<pregunta>
+  <enunciado>¿Qué es un RAID?</enunciado>
+  <opcionA>Es un tipo de disco duro</opcionA>
+  <opcionB>Es un sistema de almacenamiento que usa múltiples discos duros entre los que se distribuyen o replican los datos.</opcionB>
+  <opcionC>Es un sistema que no sirve para almacenar</opcionC>
+  <opcionD>Ninguna es correcta</opcionD>
+  <solucion>B</solucion>
+</pregunta>
