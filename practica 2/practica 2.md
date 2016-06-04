@@ -29,9 +29,18 @@ Primero establezco la contraseña , lo muestro en la imagen :
 
 ![imagen](imagen4.png)
 
+A continuación ejecuto ssh-copy-id -i .ssh/id_rsa.pub root@10.211.55.19 y cuando introduzca root@10.211.55.19 no me pedirá contraseña a la hora de entrar en la máquina virtual, tal y como se puede ver en la siguiente imagen.
+
+![imagen](imagen5.png)
+
 4. Establecer una tarea en cron que se ejecute cada hora para mantener actualizado el contenido del directorio /var/www entre las dos máquinas
+Para ello me dirijo a /etc/crontab, lo abro con nano, y añado la línea que aparece en la siguiente imagen.
 
+![imagen](imagen6.png)
 
+Como se puede apreciar , añado la ip de la máquina 1 , a continuación muestro en la siguiente imagen el resultado, se puede ver como ha añadido un archivo creado en la máquina 1 en mi máquina 2
+
+![imagen](imagen7.png)
 
 
 
