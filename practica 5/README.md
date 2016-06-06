@@ -6,13 +6,17 @@ Cuestiones a resolver de la Práctica 5 :
 
 Para crear la base de datos utilizo el siguiente comando
 
+~~~
 create database empresa;
 use empresa;
+~~~
 
-Ahora le crearé una tabla y le asignare algunos datos
+Ahora le crearé una tabla y le asignaré algunos datos
 
+~~~
 create table informacion(id int,usuario varchar(50),departamento varchar(50));
 insert into informacion(id,usuario,departamento) values (1,"david","departamento web");
+~~~
 
 En la siguiente imagen muestro los datos de nuestra base de datos que he creado
 
@@ -41,11 +45,13 @@ A continuación , la copia de seguridad de la base de datos que he creado en la 
 
 Ahora ejecuto el siguiente comando para traerme a la máquina2 la base de datos de la máquina 1 e importar sus tablas y su información.
 
+~~~
 scp root@10.211.55.19:/home/maquina1/empresa.sql /root/
 
 sudo mysql -u root -p empresa < /root/empresa.sql
+~~~
 
-Por último muestro la base de datos con los datos importados en la siguiente imagen :
+Por último muestro la base de datos con los datos importados en la siguiente imágen :
 
 ![imagen](imagen6.png)
 
@@ -61,21 +67,25 @@ Para la configuración, me voy a la máquina 1 y edito el archivo /etc/mysql/my.
 
 Guardo el archivo y reinicio mysql para que los cambios hagan efecto :
 
+~~~
 /etc/init.d/mysql restart
+~~~
 
-Ahora voy a crear en el maestro un usuario y le doy los permisos, para ello introduzco los comando que aparecen en la siguiente imagen:
+Ahora voy a crear en el maestro un usuario y le doy los permisos, para ello introduzco los comandos que aparecen en la siguiente imagen:
 
 ![imagen](imagen7.png)
 
-Una vez hecho eso , para obtener los de la base de datos para configurar el esclavo ejecuto el siguiente codigo que me muestra lo siguiente :
+Una vez hecho eso , para obtener los de la base de datos para configurar el esclavo ejecuto el siguiente código que me muestra lo siguiente :
 
 ![imagen](imagen8.png)
 
-En mmi caso , esos datos no aparecieron a la primera, mi base de datos es la versión 5.5.38, cuando ponía ese comando me aparecía en la consola de mysql Empty set (0.00 sec) . Para solucionarlo hice lo siguiente puse :
+En mmi caso , esos datos no aparecieron a la primera, mi base de datos es la versión 5.5.38, cuando ponía ese comando me aparecía en la consola de mysql Empty set (0.00 sec) . Para solucionarlo hice lo siguiente:
 
+~~~
 touch /var/lib/mysql/mysql-bin.log
 nano /etc/my.cnf 
 log-bin = /var/lib/mysql/mysql-bin.log 
+~~~
 
 Guardé , salí y reinicié el servicio, y ya me apareció esos datos que los necesitaba para añadirlo a la configuración de la otra máquina.
 Una vez realizado esto, realizo los mismo pasos con la otra máquina, la única diferencia es que pondré server-id =2 en el archivo de configuración:
@@ -89,27 +99,37 @@ edito el archivo /etc/mysql/my.cnf:
 
 Guardo el archivo y reinicio mysql para que los cambios hagan efecto :
 
+~~~
 /etc/init.d/mysql restart
+~~~
 
 Ejecuto en la línea de comandos de mysql lo siguiente , donde master host será la Ip de la máquina 1 , añadiré el archivo que mostraba antes por consola y el master
 
+~~~
 CHANGE MASTER TO MASTER_HOST='10.211.55.19', MASTER_USER='esclavo', MASTER_PASSWORD='esclavo', MASTER_LOG_FILE='mysql-bin.000001', MASTER_LOG_POS=107, MASTER_PORT=3306;
+~~~
 
+~~~
 START SLAVE;
+~~~
 
 Realizado esto, desbloqueo las tablas
 
+~~~
 UNLOCK TABLES;
+~~~
 
 Por último para comprobar que la configuración está correctamente pongo 
 
+~~~
 SHOW SLAVE STATUS\G
+~~~
 
 Me fijo en el 0 , y como se puede ver en la imagen hay 0 en el second_behind_master, es decir no esta null 
 
 ![imagen](imagen9.png)
 
-Por último , para corroborar que todo funciona correctamente, en la imagen muestro dos consultas, la primera la hago antes de insertar datos en la otra máquina, la siguiente consulta la hago despues de insertar en la otra máquina , y como se puede observar , en la primera consulta solo hay un dato y en la siguiente consulta aparecen dos, por tanto lo ha realizado correctamente la replicación de la base de datos , lo muestro en la siguiente imagen :
+Por último , para corroborar que todo funciona correctamente, en la imagen muestro dos consultas, la primera la hago antes de insertar datos en la otra máquina, la siguiente consulta la hago despues de insertar en la otra máquina , y como se puede observar , en la primera consulta solo hay un dato y en la siguiente consulta aparecen dos, por tanto ,he realizado correctamente la replicación de la base de datos , lo muestro en la siguiente imagen :
 
 ![imagen](imagen10.png)
 

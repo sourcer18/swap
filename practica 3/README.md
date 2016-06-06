@@ -6,35 +6,43 @@ Cuestiones a resolver de la Práctica 3 :
 
 1. Instalación de NGINX (balanceador de carga):
 
-Para instalar Nginx nos vamos a dirigir a la carpeta tmp, una vez alli lo primero que hago es importar la clave del repositorio del software:
+Para instalar Nginx nos vamos a dirigir a la carpeta tmp, una vez allí, lo primero que hago es importar la clave del repositorio del software:
 
+~~~
 wget http://nginx.org/keys/nginx_signing.key 
 apt-key add /tmp/nginx_signing.key
 rm -f /tmp/nginx_signing.key
-En la imagen muestro como lo he realizado
+~~~
+
+En la imágen muestro como lo he realizado
 
 ![imagen](imagen1.png)
 
 A continuación, añado el repositorio al fichero /etc/apt/sources.list
 Para ello, ejecuto las siguientes órdenes en el terminal:
+
+~~~
 echo "deb http://nginx.org/packages/ubuntu/ lucid nginx" >> /etc/apt/sources.list 
 echo "deb-src http://nginx.org/packages/ubuntu/ lucid nginx" >> /etc/apt/sources.list
+~~~
 
 ![imagen](imagen2.png)
 
 Ahora ya puedo instalar el paquete del nginx:
 
+~~~
 apt-get update apt-get install nginx
+~~~
 
 Una vez instalado , el paso siguiente será configurarlo
 
 2.Configuración de Nginx
 
-Para configurar Nginx debo modificar el archivo que se encuentra en la siguiente dirección /etc/nginx/conf.d/default.conf , introduzco los datos que se pueden ver en la imagen
+Para configurar Nginx debo modificar el archivo que se encuentra en la siguiente dirección /etc/nginx/conf.d/default.conf , introduzco los datos que se pueden ver en la imágen
 
 ![imagen](imagen3.png)
 
-En la imagen puedo ver como tengo las Ip de mis dos máquinas virtuales, además he configurado para que no salga la gestión Round-robin que tiene por defecto, he supuesto que el servidor 1 tiene el doble de capacidad que el 2, le añado la etiqueta weight para darles diferentes cargas a los diferentes equipos.
+En la imágen puedo ver como tengo las Ip de mis dos máquinas virtuales, además he configurado para que no salga la gestión Round-robin que tiene por defecto, he supuesto que el servidor 2 tiene el doble de capacidad que el 1, le añado la etiqueta weight para darles diferentes cargas a los diferentes equipos.
 Una vez guardado el archivo, reinicio Nginx con el siguiente comando : 
 
 service nginx restart
