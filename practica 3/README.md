@@ -45,7 +45,9 @@ Para configurar Nginx debo modificar el archivo que se encuentra en la siguiente
 En la imágen puedo ver como tengo las Ip de mis dos máquinas virtuales, además he configurado para que no salga la gestión Round-robin que tiene por defecto, he supuesto que el servidor 2 tiene el doble de capacidad que el 1, le añado la etiqueta weight para darles diferentes cargas a los diferentes equipos.
 Una vez guardado el archivo, reinicio Nginx con el siguiente comando : 
 
+~~~
 service nginx restart
+~~~
 
 3. Prueba de funcionamiento
 
@@ -60,7 +62,9 @@ Como se puede observar la maquina1 aparece más , ya que como he contado antes, 
 
 En mi máquina 3 instalo Haproxy, para ello pongo el siguiente comando:
 
+~~~
 sudo apt-get install haproxy
+~~~
 
 5.Configuración de Haproxy
 
@@ -70,10 +74,10 @@ Para configurar Haproxy , modifico el archivo que se encuentra en la dirección 
 
 En la imagen se puede ver como he puesto las IP de los ordenadores junto tambien como con Nginx le he cambiado la carga , y he establecido diferentes cargas en cada uno de ellos con la propiedad weight .
 
-5. Prueba de funcionamiento
+5.Prueba de funcionamiento
 
-Para probarlo, la pruebo con la consola de sistema operativo anfitrión , en mi casa un MacBookPro 
-Y ahora se puede ver en la siguiente captura el reparto de solicitudes a nuestra granja web:
+Para probarlo, lo pruebo con la consola de sistema operativo anfitrión , en mi casa un MacBookPro 
+Y ahora se puede ver en la siguiente captura el reparto de solicitudes de nuestra granja web:
 
 ![imagen](imagen6.png)
 
